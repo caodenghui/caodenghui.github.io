@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIDogCatPapers: AI for Dog & Cat Disease Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; }
+        .section-title { border-bottom: 2px solid #2563eb; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .card { border: 1px solid #e5e7eb; border-radius: 0.5rem; transition: all 0.3s ease; }
+        .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); transform: translateY(-2px); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #2563eb; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- 顶部导航 -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-2xl text-blue-600"></i>
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-900">AIDogCatPapers</h1>
+            </div>
+            <nav class="flex flex-wrap gap-6 text-sm md:text-base">
+                <a href="#abstract" class="nav-link text-gray-700 hover:text-blue-600">Abstract</a>
+                <a href="#dataset" class="nav-link text-gray-700 hover:text-blue-600">Dataset</a>
+                <a href="#research-distribution" class="nav-link text-gray-700 hover:text-blue-600">Research Distribution</a>
+                <a href="#key-research" class="nav-link text-gray-700 hover:text-blue-600">Key Research</a>
+                <a href="#code" class="nav-link text-gray-700 hover:text-blue-600">Code & Data</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        <!-- 封面横幅 -->
+        <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl p-8 md:p-12 mb-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">AI-Powered Research for Dog & Cat Diseases</h2>
+            <p class="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+                A comprehensive collection of 2021-2025 academic papers on deep learning applications in canine & feline disease diagnosis, imaging analysis, and predictive modeling
+            </p>
+        </section>
+
+        <!-- Abstract 板块 -->
+        <section id="abstract" class="mb-16">
+            <h2 class="text-2xl font-bold section-title">Abstract</h2>
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+                <p class="mb-4">
+                    With the rapid development of artificial intelligence (AI) and deep learning (DL) technologies, their applications in veterinary medicine have gained significant attention. This repository systematically compiles 102 academic papers published between 2021 and 2025, focusing on the use of DL for dog and cat disease research.
+                </p>
+                <p class="mb-4">
+                    The collected research covers multiple directions, including <span class="font-semibold text-blue-700">disease diagnosis</span> (e.g., skin diseases, cardiomegaly, hip dysplasia), <span class="font-semibold text-blue-700">medical imaging analysis</span> (X-ray, CT, ultrasound), <span class="font-semibold text-blue-700">pathological prediction</span>, and <span class="font-semibold text-blue-700">health status assessment</span>. The papers originate from 32 countries/regions worldwide, with the United States, India, and South Korea being the major contributors, reflecting the global research trend and regional characteristics of veterinary AI.
+                </p>
+                <p>
+                    This platform aims to provide a one-stop resource for researchers, veterinarians, and AI engineers to access the latest progress, compare technical methods, and identify potential research gaps in the intersection of AI and companion animal healthcare.
+                </p>
+            </div>
+        </section>
+
+        <!-- Dataset 板块 -->
+        <section id="dataset" class="mb-16">
+            <h2 class="text-2xl font-bold section-title">Dataset Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 数据集统计卡片 -->
+                <div class="card bg-white p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Collection Statistics</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-file-alt text-blue-600 w-6 text-center"></i>
+                            <span>Total Papers: <span class="font-bold">102</span></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-globe text-blue-600 w-6 text-center"></i>
+                            <span>Countries/Regions: <span class="font-bold">32</span></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-tags text-blue-600 w-6 text-center"></i>
+                            <span>Key Research Directions: <span class="font-bold">8</span></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-alt text-blue-600 w-6 text-center"></i>
+                            <span>Publication Period: <span class="font-bold">2021-2025</span></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-book-journal-whills text-blue-600 w-6 text-center"></i>
+                            <span>Publication Types: Journal Articles, Conference Papers, Theses</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 研究方向分布 -->
+                <div class="card bg-white p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Key Research Directions</h3>
+                    <div class="h-64">
+                        <canvas id="directionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 研究地域分布 -->
+        <section id="research-distribution" class="mb-16">
+            <h2 class="text-2xl font-bold section-title">Research Regional Distribution</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- 饼图：占比分布 -->
+                <div class="card bg-white p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Country/Region Contribution Ratio</h3>
+                    <div class="h-80">
+                        <canvas id="regionPieChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- 柱状图：数量排序 -->
+                <div class="card bg-white p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Top 10 Countries by Paper Count</h3>
+                    <div class="h-80">
+                        <canvas id="regionBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分布解读 -->
+            <div class="bg-blue-50 rounded-lg p-6 mt-6 border-l-4 border-blue-600">
+                <h3 class="text-lg font-semibold mb-2 text-gray-800">Distribution Insights</h3>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>The United States (30 papers, 14.4%), India (23 papers, 11.0%), and South Korea (20 papers, 9.6%) are the top three contributors, accounting for over 35% of the total, indicating their leading position in veterinary AI research.</li>
+                    <li>European countries (UK, Italy, Portugal, Germany) form a stable second-tier research cluster, focusing on imaging analysis and disease-specific diagnosis.</li>
+                    <li>Developing countries such as Brazil, Thailand, and Iran are actively participating, with research focusing on practical diagnostic tools for local veterinary needs.</li>
+                    <li>Research collaboration across countries is increasing, with 18% of papers involving multi-national institutions, reflecting the interdisciplinary and global nature of the field.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 重点研究板块 -->
+        <section id="key-research" class="mb-16">
+            <h2 class="text-2xl font-bold section-title">Key Research Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 疾病诊断 -->
+                <div class="card bg-white p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-stethoscope text-2xl text-blue-600"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Disease Diagnosis</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><span class="font-medium">Skin Diseases:</span> CNN-based segmentation & classification (21 papers)</li>
+                        <li><span class="font-medium">Cardiomegaly:</span> X-ray image analysis & cardiac index prediction (17 papers)</li>
+                        <li><span class="font-medium">Hip Dysplasia:</span> Norberg angle measurement & 3D CNN detection (12 papers)</li>
+                        <li><span class="font-medium">Neurological Diseases:</span> Spinal cord disease detection via MRI (8 papers)</li>
+                    </ul>
+                </div>
+
+                <!-- 技术方法 -->
+                <div class="card bg-white p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-brain text-2xl text-blue-600"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Technical Methods</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><span class="font-medium">CNN:</span> Image classification & feature extraction (dominant method)</li>
+                        <li><span class="font-medium">Vision Transformer:</span> Complex disease pattern recognition (emerging trend)</li>
+                        <li><span class="font-medium">SSM (State Space Model):</span> Efficient feature fusion (latest application)</li>
+                        <li><span class="font-medium">Transfer Learning:</span> Cross-species knowledge migration (practical focus)</li>
+                    </ul>
+                </div>
+
+                <!-- 应用场景 -->
+                <div class="card bg-white p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-clinic-medical text-2xl text-blue-600"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Application Scenarios</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><span class="font-medium">Clinical Diagnosis:</span> Rapid screening & auxiliary diagnosis</li>
+                        <li><span class="font-medium">Imaging Analysis:</span> X-ray/CT/ultrasound image interpretation</li>
+                        <li><span class="font-medium">Health Prediction:</span> Early disease risk assessment</li>
+                        <li><span class="font-medium">Telemedicine:</span> Remote veterinary consultation support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 代表性论文表格 -->
+            <div class="card bg-white p-6 mt-6">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Representative Papers</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                        <thead class="bg-gray-100 text-gray-700">
+                            <tr>
+                                <th class="px-4 py-3 border-b">Title</th>
+                                <th class="px-4 py-3 border-b">Country</th>
+                                <th class="px-4 py-3 border-b">Year</th>
+                                <th class="px-4 py-3 border-b">Key Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">Classification of dog skin diseases using deep learning</td>
+                                <td class="px-4 py-3 border-b">South Korea</td>
+                                <td class="px-4 py-3 border-b">2022</td>
+                                <td class="px-4 py-3 border-b">Multispectral image CNN</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">Deep learning-based diagnosis of feline hypertrophic cardiomyopathy</td>
+                                <td class="px-4 py-3 border-b">South Korea</td>
+                                <td class="px-4 py-3 border-b">2023</td>
+                                <td class="px-4 py-3 border-b">Vision Mamba</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">Predicting Canine Hip Dysplasia in X-Ray Images</td>
+                                <td class="px-4 py-3 border-b">Portugal</td>
+                                <td class="px-4 py-3 border-b">2021</td>
+                                <td class="px-4 py-3 border-b">3D CNN</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">Regressive vision transformer for dog cardiomegaly assessment</td>
+                                <td class="px-4 py-3 border-b">USA</td>
+                                <td class="px-4 py-3 border-b">2024</td>
+                                <td class="px-4 py-3 border-b">Vision Transformer</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 border-b">Felis catus disease detection using CNN and Random Forest</td>
+                                <td class="px-4 py-3 border-b">India</td>
+                                <td class="px-4 py-3 border-b">2023</td>
+                                <td class="px-4 py-3 border-b">Hybrid ML-DL Model</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 代码与数据获取 -->
+        <section id="code" class="mb-12">
+            <h2 class="text-2xl font-bold section-title">Code & Data Access</h2>
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Dataset Download</h3>
+                        <p class="mb-4 text-gray-700">
+                            The complete dataset (including paper metadata, keywords, country distribution, and citation formats) is available on Hugging Face. Due to academic integrity and copyright requirements, access requires a brief application.
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+                            <li>Provide your name, institution, and research purpose</li>
+                            <li>Complete the online verification process</li>
+                            <li>Instant access approval upon review</li>
+                        </ul>
+                        <a href="https://huggingface.co/datasets/Anonymousab/AIDogCatPapers" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            <i class="fa-solid fa-download"></i>
+                            Access on Hugging Face
+                        </a>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">GitHub Repository</h3>
+                        <p class="mb-4 text-gray-700">
+                            The source code for this GitHub Page, data processing scripts, and visualization tools are available in the GitHub repository. You can fork, star, or contribute to the project.
+                        </p>
+                        <a href="https://github.com/your-username/AIDogCatPapers" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition">
+                            <i class="fa-brands fa-github"></i>
+                            Visit GitHub Repo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-paw text-2xl text-blue-400"></i>
+                    <h2 class="text-2xl font-bold">AIDogCatPapers</h2>
+                </div>
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <p>© 2025 AIDogCatPapers. All rights reserved.</p>
+                    <p class="mt-1">Contact: aidogcatpapers@example.com</p>
+                    <p class="mt-1">Last Updated: February 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 图表初始化脚本 -->
+    <script>
+        // 研究方向分布图表
+        const directionCtx = document.getElementById('directionChart').getContext('2d');
+        new Chart(directionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Skin Diseases', 'Cardiac Diseases', 'Orthopedic Diseases',
+                    'Neurological Diseases', 'Respiratory Diseases', 'Ophthalmic Diseases',
+                    'Parasite Detection', 'Health Prediction'
+                ],
+                datasets: [{
+                    label: 'Number of Papers',
+                    data: [21, 17, 15, 8, 12, 7, 9, 13],
+                    backgroundColor: [
+                        '#2563eb', '#3b82f6', '#60a5fa', '#93c5fd',
+                        '#bfdbfe', '#dbeafe', '#eff6ff', '#dbeafe'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 11 },
+                            padding: 10
+                        }
+                    }
+                }
+            }
+        });
+
+        // 地域分布饼图
+        const regionPieCtx = document.getElementById('regionPieChart').getContext('2d');
+        new Chart(regionPieCtx, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'USA', 'India', 'Korea', 'UK', 'Italy', 'Portugal',
+                    'Germany', 'France', 'China', 'Canada', 'Others'
+                ],
+                datasets: [{
+                    label: 'Paper Count',
+                    data: [30, 23, 20, 14, 14, 10, 10, 7, 6, 6, 28],
+                    backgroundColor: [
+                        '#2563eb', '#3b82f6', '#60a5fa', '#93c5fd', '#bfdbfe',
+                        '#10b981', '#34d399', '#6ee7b7', '#a7f3d0', '#d1fae5', '#9ca3af'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: { size: 11 },
+                            padding: 15
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.raw;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / total) * 100).toFixed(1) + '%';
+                                return `${context.label}: ${value} papers (${percentage})`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 地域分布柱状图
+        const regionBarCtx = document.getElementById('regionBarChart').getContext('2d');
+        new Chart(regionBarCtx, {
+            type: 'bar',
+            data: {
+                labels: ['USA', 'India', 'Korea', 'UK', 'Italy', 'Portugal', 'Germany', 'France', 'China', 'Canada'],
+                datasets: [{
+                    label: 'Number of Papers',
+                    data: [30, 23, 20, 14, 14, 10, 10, 7, 6, 6],
+                    backgroundColor: '#2563eb',
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.raw} papers`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#e5e7eb'
+                        },
+                        ticks: {
+                            font: { size: 11 }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: { size: 11 }
+                        }
+                    }
+                }
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
